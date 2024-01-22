@@ -1,0 +1,28 @@
+package notation;
+
+import org.junit.jupiter.api.Test;
+
+public class ReversePolishNotationCalculatorTest {
+
+    @Test
+    public void shouldCalculateAddition() {
+        private final ReversePolishNotationCalculator reversePNC = new ReversePolishNotationCalculator();
+        @Test
+        public void shouldCalculateAddition() {
+            int additionResult = reversePNC.calculatePolishNotation("-1  1 2  3 + +  +");
+            assertEquals(additionResult, 5);
+        }
+
+        @Test
+        public void shouldCalculateSubtraction() {
+            int subtractionResult = reversePNC.calculatePolishNotation("   -1 1 2   -  -");
+            assertEquals(subtractionResult, 0);
+        }
+
+        @Test
+        public void shouldCalculateMultiplication() {
+            int additionResult = reversePNC.calculatePolishNotation("-1  1 2   *   *  ");
+            assertEquals(additionResult, -2);
+        }
+    }
+}
